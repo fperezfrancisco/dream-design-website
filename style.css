@@ -286,7 +286,6 @@ button {
   width: 300px;
   height: auto;
   background-color: #7a7a7a;
-  border-radius: 1rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -352,6 +351,213 @@ button {
   text-decoration: none;
 }
 
+/* about section */
+.aboutSection {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 4rem 2rem;
+  margin-bottom: 8rem;
+}
+
+.aboutCopy {
+  width: 100%;
+  max-width: unset;
+  padding: 4rem 4rem 6rem;
+  border: 1px solid var(--grey-feint-border);
+}
+
+.statsCopy {
+  margin-top: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: flex-start;
+  max-width: 200px;
+  margin-bottom: 2rem;
+}
+
+.statBox {
+  text-align: left;
+}
+
+.stat {
+  font-weight: 700;
+}
+
+.statPara {
+  margin: 0.35rem 0rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.aboutArt {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.aboutImg {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  top: -48px;
+}
+
+.aboutImg-1 {
+  left: 0px;
+  right: 200px;
+  margin: auto;
+}
+
+.aboutImg-2 {
+  left: 200px;
+  right: 0px;
+  margin: auto;
+}
+
+/* insta section */
+
+.instaSection {
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 2rem;
+}
+
+.instaCopy {
+  width: 100%;
+  max-width: unset;
+}
+
+.instaCarousel {
+  margin: 2rem 0rem;
+  padding: 1rem 0rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.instaBox {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* cta section */
+.ctaSection {
+  width: 100%;
+  background-color: var(--background-accent);
+  padding: 6rem 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.ctaCopy {
+  row-gap: 1rem;
+  text-align: center;
+}
+
+.ctaPara {
+  margin-bottom: 1.5rem;
+}
+
+/* FOOTER  */
+
+.mainFooterContainer {
+  width: 100%;
+  margin-top: 3rem;
+  padding: 6rem 2rem;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.footerTop,
+.footerBottom {
+  width: 100%;
+  max-width: 1000px;
+  align-items: center;
+}
+
+.footerTop {
+  row-gap: 1rem;
+}
+
+.footerNav {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.footerNavList {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 1rem;
+  width: 100%;
+  padding: 1rem 0rem;
+}
+
+.footerNavLi {
+  padding: 0.5rem 0rem;
+  margin: 0rem 0.5rem;
+  color: var(--grey-text);
+  font-weight: 300;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerNavLi:hover::after,
+.footerNavLi:focus::after {
+  width: 100%;
+}
+
+.footerNavLi::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: 0px;
+  transition: all 0.5s ease;
+}
+
+.boxContainer {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.footerSmallBox {
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+  margin: 1rem;
+  border: 1px solid var(--grey-feint-border);
+  padding: 2rem;
+}
+
+.footerSmallBox .sectionTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.footerBoxText {
+  color: var(--grey-text);
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0.25rem;
+}
+
+.footerBottom {
+  text-align: center;
+}
+
 @media only screen and (max-width: 320px) {
   .mainHeader {
     padding: 1rem;
@@ -368,11 +574,34 @@ button {
     font-size: 1.75rem;
     font-weight: 400;
   }
+
+  .aboutSection {
+    margin-bottom: 1rem;
+  }
+
+  .aboutArt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .aboutImg {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+  }
 }
 
 @media only screen and (min-width: 480px) {
   .logoImg {
     width: 248px;
+  }
+
+  .footerNavList {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -404,6 +633,31 @@ button {
     max-width: 200px;
     height: 1px;
     background-color: var(--grey-feint-border);
+  }
+
+  .aboutSection {
+    margin-bottom: 10rem;
+  }
+
+  .aboutImg {
+    width: 280px;
+  }
+
+  .aboutImg-1 {
+    left: 0px;
+    right: 300px;
+    margin: auto;
+  }
+
+  .aboutImg-2 {
+    left: 300px;
+    right: 0px;
+    margin: auto;
+  }
+
+  .instaSection {
+    margin-top: 4rem;
+    padding: 10rem 2rem;
   }
 }
 
@@ -464,5 +718,46 @@ button {
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
+  }
+
+  /* about section 1000px*/
+  .aboutSection {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .aboutCopy {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .aboutCopy .sectionTitle {
+    text-align: left;
+    width: unset;
+    max-width: 400px;
+  }
+
+  .aboutArt {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  .aboutImg-1 {
+    top: 35%;
+    right: -22.5%;
+  }
+
+  .aboutImg-2 {
+    top: -10%;
+    right: -50%;
+  }
+
+  .instaBox {
+    aspect-ratio: 1 / 1;
+    width: calc(90% / 3);
+    max-width: 450px;
   }
 }
