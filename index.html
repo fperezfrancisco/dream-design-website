@@ -30,9 +30,21 @@
           <li class="navLi"><button class="contactBtn">Let's Talk</button></li>
         </ul>
       </nav>
-      <a href="#" class="mobileMenuLink flex">
+      <a href="#" class="mobileMenuLink flex" id="menuOpenBtn">
         <i class="bx bx-menu-alt-right"></i>
       </a>
+      <div class="mobileMenu flexColumn open" id="mobileMenu">
+        <span class="mobileCloseBtn" id="menuCloseBtn">
+          <i class="bx bxs-x-square"></i>
+        </span>
+        <ul class="navList mobileNavList flexColumn noList">
+          <li class="navLi"><a href="#" class="navLink">About</a></li>
+          <li class="navLi"><a href="#" class="navLink">Weddings</a></li>
+          <li class="navLi"><a href="#" class="navLink">Events</a></li>
+          <li class="navLi"><a href="#" class="navLink">Contact</a></li>
+          <li class="navLi"><button class="contactBtn">Let's Talk</button></li>
+        </ul>
+      </div>
     </header>
     <main class="mainContainer flexColumn">
       <section class="pageSection flex heroSection">
@@ -247,5 +259,6 @@
         </p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

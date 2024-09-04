@@ -82,6 +82,47 @@ button {
   font-size: 2.25rem;
 }
 
+.mobileMenu {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 275px;
+  background-color: #fff;
+  z-index: 998;
+  font-family: "Inter", sans-serif;
+  padding: 4rem 2rem;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35);
+  transform: translateX(120%);
+  transition: all 0.45s ease-in-out;
+}
+
+.mobileMenu.open {
+  transform: translateX(0%);
+}
+
+.mobileCloseBtn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.25rem;
+  color: var(--black-logo);
+  cursor: pointer;
+  z-index: 999;
+  transition: color 0.5s ease;
+}
+
+.mobileCloseBtn:hover,
+.mobileCloseBtn:focus {
+  color: var(--grey-text);
+}
+
+.mobileNavList {
+  padding-top: 3rem;
+  row-gap: 1.25rem;
+}
+
 .desktopNav {
   display: none;
 }
@@ -614,6 +655,10 @@ button {
     display: none;
   }
 
+  .mobileMenu {
+    display: none;
+  }
+
   .mainTitle {
     font-size: 5rem;
   }
@@ -671,6 +716,10 @@ button {
     max-width: 450px;
     text-align: left;
     align-items: flex-start;
+  }
+
+  .sectionTitle {
+    font-size: 4rem;
   }
 
   .mainTitle {
@@ -734,7 +783,13 @@ button {
   .aboutCopy .sectionTitle {
     text-align: left;
     width: unset;
-    max-width: 400px;
+    max-width: 600px;
+    line-height: 1;
+  }
+
+  .aboutCopy .stat,
+  .aboutCopy .statPara {
+    font-size: 1.25rem;
   }
 
   .aboutArt {
