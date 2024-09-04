@@ -14,6 +14,10 @@
   --bkg-beige: #fff9ee;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   overflow-x: hidden;
@@ -184,6 +188,28 @@ button {
   text-align: center;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 /* hero section */
 .heroSection {
   padding: 4rem 2rem;
@@ -205,6 +231,10 @@ button {
   line-height: 1;
   font-family: "Italianno", cursive;
   margin-bottom: 1rem;
+  /*animation*/
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fade-in 1s ease-out forwards;
 }
 
 .heroPara {
@@ -213,6 +243,17 @@ button {
   margin-bottom: 2rem;
   line-height: 1.5;
   font-weight: 300;
+  /*animation*/
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fade-in 1s ease-out 0.5s forwards;
+}
+
+.heroBtn {
+  /*animation*/
+  opacity: 0;
+  transform: translateY(100%);
+  animation: fade-in 1s ease-out 0.75s forwards;
 }
 
 .primaryBtn {
@@ -247,17 +288,31 @@ button {
   bottom: -64px;
 }
 
+.mainHeroImg {
+  opacity: 0;
+  transform: translateX(120%);
+  animation: slide-from-right 1s ease 1s forwards;
+}
+
 .woodenHero {
   left: -350px;
   right: 0px;
   margin: auto;
+  opacity: 0;
+  transform: translateX(120%);
+  animation: slide-from-right 1s ease 0.85s forwards;
 }
 
 .whiteHero {
   right: -350px;
   left: 0px;
   margin: auto;
+  opacity: 0;
+  transform: translateX(120%);
+  animation: slide-from-right 1s ease 1.25s forwards;
 }
+
+/* hero animation */
 
 /* services section */
 
@@ -313,6 +368,10 @@ button {
   line-height: 1.5;
 }
 
+.sectionPara.in-view {
+  animation: fade-in 1.25s ease forwards;
+}
+
 .serviceCarousel {
   width: 100%;
   flex-wrap: wrap;
@@ -330,6 +389,22 @@ button {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
+}
+
+.serviceBox:first-child.in-view {
+  animation: fade-in 1.25s ease forwards;
+  animation-delay: 0s;
+}
+
+.serviceBox:nth-child(2).in-view {
+  animation: fade-in 1.25s ease forwards;
+  animation-delay: 0.25s;
+}
+
+.serviceBox:nth-child(3).in-view {
+  animation: fade-in 1.25s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .serviceBox:hover .overlay {
